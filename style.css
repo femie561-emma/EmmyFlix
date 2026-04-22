@@ -1,0 +1,1128 @@
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    color: #222;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    text-decoration: 0;
+    transition: background-color 0.3s, color 0.3s;
+    z-index: 2;
+    width: 100%;
+    padding: 20px 40px;
+}
+
+nav.dark{
+    background-color: #141414;
+    color: white;
+}
+
+nav.light{
+    background-color: #f5f5f5;
+    color: #222;
+}
+
+
+a{
+    color: #ffff;
+    text-decoration: 0;
+}
+
+nav a:hover{
+    color: #e50914;
+}
+
+
+/* INDEX>HTML */
+
+.landing{
+    background: linear-gradient(
+        to bottom,
+        #0a0f1c,
+        #141414,
+        #0b0b0b
+    );
+    font-family: Arial;
+    color: #fff;
+}
+
+.logo{
+    color: #e50914;
+}
+
+.nav span, .login-card span{
+    color: darkblue;
+}
+
+.signin-btn{
+    background: red;
+    padding: 8px 15px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.signin-btn:hover{
+   background: darkblue;
+}
+
+/* Hero */
+.hero{
+    min-height: 100vh;
+    background-color: url('https://via.placeholder.com/1400x800') center/cover;
+    position: relative;
+     background:black;
+     text-align: center;
+     /* margin-top: 10%; */
+}
+
+
+/* Clips */
+.bg-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+
+
+.hero-content{
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    padding-top: 10%;
+}
+
+.hero-content h1{
+    font-size: 45px;
+    color: white;
+}
+
+p{
+   color: white; 
+}
+
+.email-box{
+    margin-top: 0px;
+}
+
+.email-box input{
+    padding: 10px;
+    width: 250px;
+    cursor: pointer;
+}
+
+.email-box button{
+    padding: 10px 15px;
+    background: red;
+    border: none;
+    color: white;
+    cursor: pointer;
+    width: 130px;
+}
+
+
+
+
+/* ICONS */
+.icon{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    text-align: center;
+    padding: 40px;
+    margin-top: 15px;
+    transition: transform 0.3s ease;
+}
+
+.icon:hover{
+   transform: translateY(-15px);
+}
+
+.icon-links{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.icon-links a{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.icon-links a:hover{
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+}
+
+.social-btn{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    padding: 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Icons Color */
+.facebook{
+    background: #1877f2;
+}
+
+.instagram{
+    background: #e1306c;
+}
+
+.twitter{
+    background: #000;
+}
+
+.social-btn i{
+    font-size: 18px;
+}
+
+/* CAROUSEL */
+.carousel{
+    display: flex;
+    overflow-x: auto;
+    padding:0 20px 20px 20px;
+    scroll-behavior: smooth;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.carousel::-webkit-scrollbar{
+    display: none;
+}
+
+.poster{
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    transform: transform 0.3s ease;
+    cursor: grab;
+     gap: 200px;
+     flex-shrink: 0;
+}
+
+.poster:hover{
+    transform: scale(1.1);
+}
+
+
+/* ROTATE IMAGES */
+
+ .poster.rotate{
+      
+    transform: rotate(360deg);
+}
+
+
+
+
+
+/* GlassMorphism */
+.glass-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+    gap: 20px;
+}
+
+.glass-card{
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+     background: linear-gradient(
+        to bottom,
+        #0a0f1c,
+        #141414,
+        #0b0b0b
+    );
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    color: #fff;
+
+}
+
+.info-box{
+    color: white;
+    text-align: center;
+}
+
+.info-btn{
+    background: transparent;
+    border: 1px solid white;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 400px;
+    background-color: black;
+}
+
+.info-btn p{
+    font-size: 16px;
+    padding: 0;
+}
+
+.info-text{
+    min-height: 0;
+    overflow: hidden;
+    transition: 0.4s ease;
+    opacity: 0;
+    margin-bottom: 10px;
+    color: #ccc;
+    transform: scale(0.9);
+    transform-origin: top;
+    transition: a 0.3s ease;
+}
+
+/* When active */
+.info-text.show{
+    min-height: 200px;
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+/* Footer */
+.footer{
+    background: #111;
+    color: #fff;
+    padding: 50px 20px 20px;
+}
+
+.footer-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-section{
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-section h3,
+.footer-section h4{
+   margin-bottom: 15px;
+}
+
+.footer-section p{
+font-size: 0.9rem;
+line-height: 1.5;
+}
+
+.footer-section ul{
+    list-style: none;
+}
+
+.footer-section ul li{
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a{
+    color: blue;
+    text-decoration: none;
+}
+
+.footer .socials a i{
+    color: #fff;
+    font-size: 18px;
+}
+
+.footer .socials a svg{
+    fill: #fff;
+    width: 18px;
+    height: 18px;
+}
+
+.footer-section ul li a:hover{
+    color: #ff6f61;
+}
+
+/* BOTTOM */
+.footer-bottom{
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #333;
+    padding-top: 15px;
+    font-size: 0.85rem;
+    color: #aaa;
+}
+
+/* SCROLL TO TOP */
+#backToTop{
+    position: fixed;
+    z-index: 9999;
+    display: block;
+    font-size: 25px;
+    right: 30px;
+    bottom: 30px;
+}
+
+
+
+
+
+
+
+       /* LOGIN FORM */
+
+.login-page{
+  
+}
+
+.login-container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.login-card{
+    width: 300px;
+    padding: 30px;
+    border-radius: 15px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+     background: linear-gradient(
+        to bottom,
+        #0a0f1c,
+        #141414,
+        #0b0b0b
+    );
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    color: #fff;
+}
+
+
+
+
+
+
+
+    /* SIGNUP FORM */
+
+   .signup-page{
+       margin: 0;
+    font-family: arial;
+    color: white;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.1)), url("movie2.jpg");
+    background-position: center top;
+    background-size: cover;
+   }
+
+
+    .signup-container{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+     span{
+        color: darkblue;
+    }
+
+    .signup-card{
+        width: 320px;
+        padding: 30px;
+        border-radius: 15px;
+
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: white;
+    }
+
+    .signup-card h2{
+        text-align: center;
+    }
+
+.signup-card input::placeholder{
+  font-size: 15px;
+  font-weight: 600;
+  font-family: serif;
+}
+
+    .signup-card input{
+        width: 90%;
+        padding: 10px;
+        margin: 8px 0;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    }
+
+    .signup-card input:focus{
+    transform: translateY(-15px);
+}
+
+    .signup-card button{
+        width: 100%;
+        padding: 10px;
+        background: red;
+        color: #fff;
+        margin-top: 10px;
+        cursor: pointer;
+        border: none;
+        border-radius: 15px;
+    }
+
+    .switch{
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .switch a{
+        color: red;
+    }
+
+
+
+
+
+/* HOME.HTML */
+ .home-page{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #141414;
+ }
+
+ .hambuger{
+    display: flex;
+     gap: 5px;
+     cursor: pointer;
+    flex-direction: column;
+    position: relative;
+    top: -200px;
+    right: 270px;
+     /* z-index: 1001; */
+      transition: transform 0.3s ease;
+      padding: 10px;
+      border-radius: 5px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+       color: #fff;
+       font-weight: bold;
+       font-size: 14px;
+   
+ }
+
+ .hambuger span:hover{
+    background: darkblue;
+ }
+
+ .hambuger span{
+    width: 25px;
+    height: 3px;
+    margin: 4px 0;
+     background: red;
+ }
+
+ .menu{
+    display: flex;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: #111;
+    border-radius: 8px;
+    padding: 10px;
+    min-width: 120px;
+    z-index: 999;
+ }
+
+ .menu.active{
+    display: flex;
+ }
+
+ .hambuger.active span:nth-child(1){
+    transform: rotate(45deg) translate(5px, 5px);
+ }
+
+ .hambuger.active span:nth-child(2){
+    opacity: 0;
+ }
+
+.hambuger.active span:nth-child(3){
+    transform: rotate(-45deg) translate(6px, -6px);
+ }
+
+ .menu a, .menu button{
+    display: block;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+ }
+
+ .menu a:hover, .menu button:hover{
+    background: darkblue;
+ }
+
+
+
+
+ #hero-header{
+     position: fixed;
+     top: 0;
+     /* left: 0; */
+     width: 100%;
+      z-index: 1000;
+      background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5)), url(movie6.jpg);
+    height: 250px;
+     background-size: cover;
+     background-position: cover top;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+      font-size: 20px;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 50vh;
+ }
+
+ .search-box{
+    display: flex;
+ }
+
+ .search-box input{
+    padding: 8PX;
+    border-radius: 5PX;
+    outline: none;
+    border: none;
+    background: transparent;
+    box-shadow: 0 10PX 25PX rgba(0,0,0,0.1);
+    background: gray;
+ }
+
+ 
+ .search-box button{
+    padding: 8px 12px;
+    background: red;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+ }
+
+
+
+
+ .navbar h1{
+    color: red;
+    background: gray;
+    margin-bottom: 100px;
+    margin-left: 0px;
+     padding: 5px 10px;
+     border-radius: 5px;
+      font-size: 29px;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+      text-align: center;
+ }
+
+ .navbar span{
+    color: darkblue;
+ }
+
+ #logout{
+    background: orangered;
+    color: #fff;
+    font-size: 15px;
+    border: none;
+ }
+
+
+
+
+.search-box input:focus{
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px)
+}
+
+.search-box input::placeholder{
+    color: #fff;
+}
+
+
+
+
+ 
+
+ /* LOADING */
+ #loading{
+    text-align: center;
+    display: none;
+ }
+
+ #movies{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 20px;
+    background: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s;
+    margin-top:240px;
+ }
+
+ .movieContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 20px;
+ }
+
+.movie-card img{
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.movie-card img:hover{
+    transform:  scale(1.08);
+}
+
+ .movie-card:hover{
+    transform: scale(1.05);
+ }
+
+ .movie-card img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+ }
+
+ .movie-card h3{
+    font-size: 14px;
+    margin: 5px;
+ }
+
+ .movie-card p{
+    font-size: 12px;
+    color: gray;
+    margin: 5px;
+ }
+
+
+
+    /* LOGIN PAGE */
+  .login-page, .login-card{
+    width: 80%;
+    margin-left: 40px;
+  }
+
+
+    
+
+
+
+
+/* WATCH PAGE */
+.watch-page{
+    background: #000;
+    color: white;
+    font-family: Arial;
+}
+
+.watch-page h2{
+    color: red;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0px;
+}
+
+.watch-page span{
+    color: darkblue;
+}
+
+
+.watch-container{
+    padding: 20px;
+}
+
+/* video{
+    width: 100%;
+    max-height: 70vh;
+    border-radius: 10px;
+} */
+
+.back-btn{
+    color: #fff;
+    background: red;
+    padding: 8px 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+#movieTitle{
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+#fullSearchBtn{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 14px;
+    max-width: 150px;
+}
+
+
+
+/* YORUBA MOVIES */
+.yoruba-page{
+       margin: 0;
+    font-family: arial;
+    color: white;
+    background-position: center top;
+    background-size: cover;
+     background: linear-gradient(
+        to bottom,
+        #0a0f1c,
+        #141414,
+        #0b0b0b
+    );
+    font-family: Arial;
+    color: #fff;
+   }
+
+   .yoruba-page header{
+         position: fixed;
+     top: 0;
+     /* left: 0; */
+     width: 100%;
+      z-index: 1000;
+      background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.3)), url(yoruba-movie.jpg);
+    height: 250px;
+     background-size: cover;
+     background-position: cover top;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+      font-size: 20px;
+      font-weight: bold;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 50vh;
+
+   }
+
+   .yoruba-page #networkStatus{
+     position: relative;
+     top: 200px;
+     left: 90px;
+   }
+
+   .searchBox{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom:  -10px;
+   }
+
+   header h1{
+    color: #fff;
+    text-align: center;
+    font-size: 2rem;
+    font-family: a;
+    font-weight: 600;
+   }
+
+   header input{
+     padding: 8PX;
+    border-radius: 5PX;
+    outline: none;
+    border: none;
+    background: transparent;
+    box-shadow: 0 10PX 25PX rgba(0,0,0,0.1);
+    background: white;
+    border: black 2px solid;
+    color: black;
+    width: 50%;
+    height: 10px;
+    font-weight: 600;
+    font-size: 20px;
+   }
+
+   header input::placeholder{
+     color: white;
+     font-size: 15px;
+     font-weight: 600;
+     color: black;
+   }
+
+   header #yorubaBtn{
+     padding: 10px;
+     background: red;
+     color: #fff;
+     cursor: pointer;
+     border-radius: 10px;
+     margin-top: -10px;
+   }
+
+.yoruba-section{
+    background: #111;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#yorubaMovies{
+ display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    width: 100%;
+    margin-top: 250px;
+     gap: 15px;
+     padding: 20px;
+      background: #222;
+}
+
+#yorubaMovies .movie-card img{
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    gap: 15px;
+}
+
+#yorubaMovies img:hover{
+    transform:  scale(1.08);
+}
+
+ #yorubaMovies .movie-card:hover{
+    transform: scale(1.05);
+ }
+
+ #yorubaMovies img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+ }
+
+ #yorubaMovies h3{
+    font-size: 14px;
+    margin: 5px;
+ }
+
+ #yorubaMovies p{
+    font-size: 12px;
+    color: gray;
+    margin: 5px;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:768px){
+   /* INDEX PAGE */
+   .signin-btn{
+    
+    margin-top: 30px;
+    margin-left: 150px;
+   }
+
+   .landing #networkStatus{
+     position: fixed;
+     
+   }
+
+   .info-box{
+    gap: 3px;
+   }
+    
+   .info-btn{
+    width: 250px;
+   }
+
+   .info-text{
+      align-items: center;
+      text-align: center;
+   }
+
+   .email-box{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 30px;
+      width: 20px;
+
+
+   }
+
+
+
+
+
+    /* HOME PAGE */
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.home-page #networkStatus{
+    position: relative;
+    left: 50px;
+    margin-top: -30px;
+}
+
+.navbar{
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.hambuger{
+    display: flex;
+    left: -160px;
+     top: -225px;
+     cursor: pointer;
+     height: 130px;
+}
+
+.hambuger span{
+    display: block;
+     background: red;
+}
+
+.menu{
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    gap: 30px;
+    width: 50px;
+    height: 90%;
+    
+    background: rgba(0, 0, 0, 0.4);
+    flex-direction: column;
+}
+
+
+
+    #movies{
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .movie-card img{
+        width: 120px;
+    }
+
+    .movie-card h3{
+        font-size: 10px;
+    }
+
+    .movie-card p{
+        font-size: 9px;
+    }
+
+    header{
+        padding: 10px 0;
+    }
+
+    .search-box{
+       width: 100%;
+    }
+
+    .search-box button{
+        width: 30%;
+    }
+
+    /* WATCH */
+    .watch-container img {
+        width: 50%;
+    }
+
+     .watch-container p{
+        font-size: 14px;
+     }
+
+     #movieTitle{
+        font-size: 20px;
+     }
+
+     #fullSearchBtn{
+        padding: 8px 12px;
+        font-size: 12px;
+     }
+
+      /* YORUBA MOVIES */
+      header input{
+        width: 80%;
+      }
+
+       header #yorubaBtn{
+         width: 30%;
+       }
+    }
+}
+
+

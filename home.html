@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineSearh</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="manifest.json">
+</head>
+<body class="home-page">
+
+  <header class="navbar" id="hero-header">
+  
+    <h1>Emmy<span class="flix">Flix</span></h1>
+    
+  
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="search movies...">
+      <button  id="searchBtn">Search</button>
+    </div>
+
+  <div class="hambuger" id="hamburger" onclick="toggleMenu()">
+<span></span>
+<span></span>
+<span></span>
+  </div>
+
+  <div id="menu" class="menu" >
+    <a href="watch.html">Watch Page</a>
+    <a href="index.html">Land Page</a>
+    <a href="yofilm.html">Yoruba Movies</a>
+     <button onclick="logout()" style="background-color: blue; color: white;">Logout</button>
+  </div>
+
+
+  <div class="down-bar">
+      <h2 id="welcomeBack" style="text-align: center; margin-top: -50px;"></h2>
+ 
+   <div id="networkStatus" style="background: #1e1e1e; width: 150px; text-align: center; padding:0; font-size: 15px;" ></div>
+
+
+    <div id="yorubaLoading" style="display: block; font-size: 30px; font-weight: bold; font-family: ar;" ></div>
+
+    </div>
+    </div>
+  </header>
+
+ 
+  <!-- Sound -->
+
+
+<div class="movieContainer" id="movies">
+  <p id="loading">Loading...</p>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp Page</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="manifest.json">
+</head>
+<body class="signup-page">
+    <div class="signup-container">
+
+        <div class="signup-card">
+           <div id="networkStatus" style="background: black; width: 200px; text-align: center; padding: 10px;"></div>
+            <h1 class="logo">Emmy<span class="flix">Flix</span></h1>
+            <h2>Create Account</h2>
+
+            <form id="signup" action="">
+
+                <input type="text" id="name" placeholder="Full Name" required>
+
+                <input type="email" id="email" placeholder="Enter Email" required>
+
+                <input type="password" id="password" placeholder="Create Password" required>
+
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+
+                <p id="show"></p>
+
+                <button type="submit">Sign Up</button>
+            </form>
+
+            <img src="poster3.jpg" alt="" width="100px">
+            <img src="poster1.jpg" alt="" width="100px">
+            <img src="poster5.jpg" alt="" width="100px">
+
+            <p class="switch">Already have account?
+                <a href="index.html">Sign In</a>
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
