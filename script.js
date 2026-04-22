@@ -190,7 +190,7 @@ function loadMovies() {
   loading.style.display = "block";
    moviesContainer.innerHTML = "";
 
-  fetch("http:api.themoviedb.org/3/movie/popular?api_key=db0dda06c09b03de058e44cc73c38fcc")
+  fetch("https://api.themoviedb.org/3/movie/popular?api_key=db0dda06c09b03de058e44cc73c38fcc")
   .then(res => res.json())
    .then(data => {
 
@@ -224,7 +224,7 @@ function searchMovies(query){
   moviesContainer.innerHTML = "";
 
   
-  fetch(`http://api.themoviedb.org/3/search/movie?api_key=db0dda06c09b03de058e44cc73c38fcc&query=${query}&with_original_language=en`)
+  fetch(`https://api.themoviedb.org/3/search/movie?api_key=db0dda06c09b03de058e44cc73c38fcc&query=${query}`)
   .then(res => res.json())
    .then(data => {
 
@@ -442,7 +442,7 @@ if(!movieID){
   window.location.href = "home.html";
 }
 
-fetch(`http://api.themoviedb.org/3/movie/${movieID}?api_key=db0dda06c09b03de058e44cc73c38fcc`)
+fetch(`https://api.themoviedb.org/3/movie/${movieID}?api_key=db0dda06c09b03de058e44cc73c38fcc`)
 .then(res => res.json())
 .then(movie =>{
 
@@ -509,16 +509,23 @@ function loadYoruba(query = "yoruba"){
   loading.style.display = "block";
   container.innerHTML = "";
 
-  fetch(`http://127.0.0.1:3000/movies?search=${query}`)
+  fetch(`https://api.themoviedb.org/3/search/movie?api_key=db0dda06c09b03de058e44cc73c38fcc&query=${query}`)
   .then(res => res.json())
   .then(data => {
 
     loading.style.display = "none";
 
-    if(data.results){
+    if(data.results && data.results.length > 0){
       display(data.results);
+    } else{
+      container.innerHTML = `<p style="text-align:center;">No movies found.</p>`;
     }
 
+  })
+  .catch(err => {
+    loading.style.display = "none";
+    console.error(err);
+    container.innerHTML = `<p style="text-align:center;">Something went wrong.</p>`;
   });
 }
 
@@ -548,15 +555,18 @@ function display(movies){
   });
 
 }
-  btn.onclick = () =>{
-    loadYoruba(input.value);
-  };
+ if(btn && input){
+   btn.onclick = () => {
+      loadYoruba(input.value);
+   };
+}
 
-  document.addEventListener("DOMContentLoaded", () => {
-    loadYoruba();
-  });
+document.addEventListener("DOMContentLoaded",  () => {
+  loadYoruba();
+})
 
 }
+
 
 
 // NETWORK STATUS
