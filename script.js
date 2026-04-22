@@ -190,7 +190,7 @@ function loadMovies() {
   loading.style.display = "block";
    moviesContainer.innerHTML = "";
 
-  fetch("http://127.0.0.1:3000/movies")
+  fetch("http:api.themoviedb.org/3/movie/popular?api_key=db0dda06c09b03de058e44cc73c38fcc")
   .then(res => res.json())
    .then(data => {
 
