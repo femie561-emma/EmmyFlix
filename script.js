@@ -224,7 +224,7 @@ function searchMovies(query){
   moviesContainer.innerHTML = "";
 
   
-  fetch(`http://127.0.0.1:3000/movies?search=${query}&with_original_language=en`)
+  fetch(`http://api.themoviedb.org/3/search/movie?api_key=db0dda06c09b03de058e44cc73c38fcc&query=${query}&with_original_language=en`)
   .then(res => res.json())
    .then(data => {
 
