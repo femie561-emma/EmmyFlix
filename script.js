@@ -442,7 +442,7 @@ if(!movieID){
   window.location.href = "home.html";
 }
 
-fetch(`http://127.0.0.1:3000/movie/${movieID}`)
+fetch(`http://api.themoviedb.org/3/movie/${movieID}?api_key=db0dda06c09b03de058e44cc73c38fcc`)
 .then(res => res.json())
 .then(movie =>{
 
