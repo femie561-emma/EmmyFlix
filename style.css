@@ -1092,6 +1092,11 @@ body{
        width: 100%;
     }
 
+    .search-box input{
+        width: 150px;
+        height: 25px;
+    }
+
     .search-box button{
         width: 30%;
     }

@@ -642,8 +642,18 @@ boxes.forEach(box => {
   });
 });
 
-   
 
+// SERVICE WORKER Registration
+if('serviceWorker' in navigator){
+  window.addEventListener("load", () => {
+        navigator.serviceWorker.register("/service-worker.js")
+  .then(() => 
+    console.log("Service Worker Registered"))
+  .catch(err =>
+    console.error("SW Error", err));
+  });
+ 
+}
 
 
 
